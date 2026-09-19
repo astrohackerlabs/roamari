@@ -12,10 +12,11 @@ brew tap astrohackerlabs/astrohacker
 brew install roamari
 ```
 
-Browsing requires [Astrohacker TermSurf](https://github.com/astrohackerlabs/termsurf), installed separately. Run `roamari` inside a TermSurf pane. The Chromium engine remains `ah-chromiumd` from TermSurf.
+Browsing requires a TermSurf-protocol host. [Astrohacker TermSurf](https://github.com/astrohackerlabs/termsurf) is one such host, installed separately. Run `roamari` inside a TermSurf pane. This formula ships `roamari-chromiumd` and the Chromium payload.
 
 ```nu
 roamari --version
+roamari-chromiumd --version
 roamari https://example.com
 roamari --browser chromium https://example.com
 ```
@@ -24,4 +25,4 @@ roamari --browser chromium https://example.com
 
 ## Source
 
-This repository is the public source for the `roamari` crate. Product development happens in the private Astrohacker monorepo. Do not expect this tree to include TermSurf, Chromium, or Homebrew publisher scripts.
+This repository is the public source for the `roamari` and `roamari-chromiumd` crates. Product development happens in the private Astrohacker monorepo. Do not expect this tree to include TermSurf, a Chromium checkout, or Homebrew publisher scripts.

@@ -1,0 +1,14 @@
+[package]
+name = "roamari-chromiumd"
+version = "0.1.2"
+edition = "2021"
+
+[[bin]]
+name = "roamari-chromiumd"
+path = "src/main.rs"
+
+[dependencies]
+prost = "0.14"
+
+[build-dependencies]
+prost-build = "0.14"
