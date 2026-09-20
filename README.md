@@ -9,16 +9,17 @@ Apple silicon, macOS 26 (Tahoe) or newer:
 ```nu
 brew trust astrohackerlabs/astrohacker
 brew tap astrohackerlabs/astrohacker
-brew install roamari
+brew uninstall roamari
+brew install --cask roamari
 ```
 
-Browsing requires a TermSurf-protocol host. [Astrohacker TermSurf](https://github.com/astrohackerlabs/termsurf) is one such host, installed separately. Run `roamari` inside a TermSurf pane. This formula ships `roamari-chromiumd` and the Chromium payload.
+Browsing requires a TermSurf-protocol host. [Astrohacker TermSurf](https://github.com/astrohackerlabs/termsurf) is one such host, installed separately. Run `roamari` inside a TermSurf pane. This cask ships `roamari` on PATH and the Chromium tree at `/opt/homebrew/opt/roamari-chromiumd/`.
 
 ```nu
 roamari --version
-roamari-chromiumd --version
+/opt/homebrew/opt/roamari-chromiumd/roamari-chromiumd --version
 roamari https://example.com
-roamari --browser chromium https://example.com
+roamari --browser /opt/homebrew/opt/roamari-chromiumd/roamari-chromiumd https://example.com
 ```
 
 `--version` and `--help` work outside TermSurf. Opening a page does not.

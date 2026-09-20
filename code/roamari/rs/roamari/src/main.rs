@@ -4508,7 +4508,7 @@ mod tests {
             helper.capture
         );
         let helper_path = render_loading_probe(browser_display_label(
-            "/opt/homebrew/opt/roamari/libexec/roamari-chromiumd/roamari-chromiumd",
+            "/opt/homebrew/opt/roamari-chromiumd/roamari-chromiumd",
         ));
         assert!(
             helper_path
@@ -4549,7 +4549,7 @@ mod tests {
         for (input, expected) in [
             ("roamari-chromiumd", "roamari-chromiumd"),
             (
-                "/opt/homebrew/opt/roamari/libexec/roamari-chromiumd/roamari-chromiumd",
+                "/opt/homebrew/opt/roamari-chromiumd/roamari-chromiumd",
                 "roamari-chromiumd",
             ),
             ("ah-chromiumd", "ah-chromiumd"),

@@ -9,14 +9,14 @@ Roamari compiles `code/termsurf/proto/termsurf.proto` and talks to the host
 compositor, then to the engine socket from `BrowserReady`. Do not merge client
 and engine into one binary. Do not add an `ahweb` or `ah-chromiumd` PATH shim.
 
-Version independently of TermSurf. Stamp both crates together. The first
-Homebrew formula defaults to 0.1.0. TermSurf must not rewrite these crate
-versions. TermSurf may still stage the TUI and renamed helper until a later
-experiment adds cask `depends_on` and stops bundling. Publish with
-`scripts/release-roamari.nu` onto `astrohackerlabs/astrohacker`
-`Formula/roamari.rb`. Ryan types the publication phrase. Do not add a roamari
-cask or a third engine formula. Do not edit `Casks/termsurf.rb` `depends_on`
-here.
+Version independently of TermSurf. Stamp both crates together. TermSurf must
+not rewrite these crate versions. TermSurf may still stage the TUI and helper
+until a later experiment adds cask `depends_on` and stops bundling. Publish
+with `scripts/release-roamari.nu` onto `astrohackerlabs/astrohacker`
+`Casks/roamari.rb`. Chromium is a cask artifact at
+`/opt/homebrew/opt/roamari-chromiumd/`. Ryan types the publication phrase. Do
+not keep `Formula/roamari.rb`. Do not add a third engine formula. Do not edit
+`Casks/termsurf.rb` `depends_on` here.
 
 Build and identity:
 
