@@ -28,6 +28,12 @@ target/release/roamari --version
 target/release/roamari-chromiumd --version
 ```
 
+The one-page installation site is `ts/roamari-com`. From the monorepo root:
+`bun run dev:roamari-com` binds 127.0.0.1:3522; local HTTPS is
+`https://roamari.test`. Project icons with
+`nu scripts/sync-roamari-com-brand-assets.nu`. Production is `ah deploy roamari-com`.
+Do not add Umami here.
+
 Product smoke must run inside a TermSurf-protocol host and pass the Chromium
 engine with `--browser`, following the root two-shell rules.
 
